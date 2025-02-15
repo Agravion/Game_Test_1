@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://cxyyetmcyy6c2"]
+
+[ext_resource type="Texture2D" uid="uid://yaop5mxavwsq" path="res://Models/B5Kebabbo_Kebbabbino.png" id="1_mqbd0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5quw0"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_mqbd0")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7gbo0"]
+_surfaces = [{
+"aabb": AABB(47.3308, 68.4753, -17.8601, 165.183, 157.736, 154.764),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_34btj"]
+resource_name = "B5Kebabbo_Cube_002"
+_surfaces = [{
+"aabb": AABB(47.3308, 68.4753, -17.8601, 165.183, 157.736, 154.764),
+"attribute_data": PackedByteArray("H6HmOzMpwEDvA/RUkKna5WseWeckBEeq1A2/VEgYIEXUDb9UCQ4SqucYLMAJDhKqMUghOTFIITkxSCE5XTuZ5107meddO5nnfRiKVH0YilR9GIpUshjdqbIY3amyGN2p"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_5quw0"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//XP8AAAAA///SyQAAAAD//+z/AAD/////2/8AAP////+mwAAA/////+z/AAAAAAAA//8AAAAAAADzwAAAAAAAAOz/AAD//wAA//8AAP//AABlwgAA//8AAOz///8AAP//4////wAA//+HwP//AAD//2z7////////m///////////v/////////74//8AAAAA/////wAAAABYwv//AAAAAEj5/////wAA////////AACLwP////8AANjt/3//f6FDLl7q/wnA/3//f/3lAI3q/wnA2f8lgD8e33Dq/wnA2f8lgFLVVZXq/wnA/3//f/YXBHTlBIw9/////8H/hH9PvJ942f8lgC4VW6p0vOp42f8lgL7nH4z1tuxt")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7gbo0")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1s4we"]
+points = PackedVector3Array(47.4182, 68.4969, -17.8601, 212.5, 225.81, 136.904, 212.449, 68.4753, 136.856, 47.3443, 225.81, 136.904, 212.426, 225.739, -17.8601, 47.3955, 68.4753, 136.856, 47.4182, 225.739, -17.8601, 212.426, 68.4969, -17.8601)
+
+[node name="B5Kebabbo" type="StaticBody3D"]
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 186.274, 0)
+mesh = SubResource("ArrayMesh_34btj")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 186.274, 0)
+shape = SubResource("ConvexPolygonShape3D_1s4we")

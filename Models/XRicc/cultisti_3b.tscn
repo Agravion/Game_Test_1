@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3rab5pikg2vm"]
+
+[ext_resource type="PackedScene" uid="uid://d4b70u63ye1ut" path="res://Models/Cultisti3b.glb" id="1_3r2e7"]
+
+[node name="Cultisti3b" instance=ExtResource("1_3r2e7")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/rotation = Quaternion(0.0755867, 1.18868e-07, 9.01063e-09, 0.997139)
+bones/3/rotation = Quaternion(-0.046916, -0.00955073, 0.040072, 0.998049)
+bones/5/rotation = Quaternion(-0.0708352, 0.016889, -0.565191, 0.82174)
+bones/6/rotation = Quaternion(-0.0224016, 0.00169014, -0.0283801, 0.999345)
+bones/7/rotation = Quaternion(0.0535572, 0.452027, -0.0896765, 0.885867)
+bones/9/rotation = Quaternion(-0.0555487, -0.0276277, 0.561537, 0.825123)
+bones/10/rotation = Quaternion(-0.0150672, -0.0222196, 0.0218595, 0.999401)
+bones/11/rotation = Quaternion(0.0199176, -0.334296, 0.0824209, 0.938646)
+bones/12/rotation = Quaternion(0.675451, 0.289328, 0.592755, -0.329692)
+bones/13/rotation = Quaternion(-0.416597, 0.0248231, -0.0336895, 0.908128)
+bones/14/rotation = Quaternion(0.00351654, 1.1786e-05, 0.0353904, 0.999367)
+bones/16/rotation = Quaternion(0.0317958, -0.0014168, -0.254104, 0.966653)
+bones/17/rotation = Quaternion(0.675451, -0.289328, -0.592755, -0.329692)
+bones/18/rotation = Quaternion(-0.393974, -0.0199114, 0.0311501, 0.918378)
+bones/19/rotation = Quaternion(0.00351654, -1.1783e-05, -0.0353904, 0.999367)
+bones/21/rotation = Quaternion(0.0317957, 0.0014168, 0.254104, 0.966653)

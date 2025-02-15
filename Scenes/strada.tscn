@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=4 uid="uid://bj586eiture3l"]
+
+[ext_resource type="Texture2D" uid="uid://cfrij4qstufye" path="res://Models/Strada_CityStreetAsphaltGenericClean001_COL_2K.jpg" id="1_fwhwc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkucc"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_fwhwc")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lad6t"]
+_surfaces = [{
+"aabb": AABB(-4.42574, -4.93947, -9.27254, 8.85147, 14.6268, 25.6785),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAAGAAQAAAACAAYAAwAGAAIAAwAHAAYABwAEAAYABwAFAAQABQADAAEABQAHAAMAAQACAAAAAQADAAIABQAAAAQABQABAAAA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("QtFkouJCAAD//wAAAAAAANrU///QkgAA//8AAP//AAC8LmSi4kIAAAAAAAAAAAAAJCv//9CSAAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0ac3f"]
+resource_name = "Strada_Cube"
+_surfaces = [{
+"aabb": AABB(-4.42574, -4.93947, -9.27254, 8.85147, 14.6268, 25.6785),
+"attribute_data": PackedByteArray("/5//f/+f/3//n/9//1//f/9f/3//X/9//5//P/+f/z//n/8//1//P/9f/z//X/8//5//v//f/3//n/+//1//v/8f/3//X/+//58AAP/f/z//n////18AAP8f/z//X///"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AQATAA0AAQAHABMACQASAAYACQAVABIAFwAOABQAFwARAA4AEAAKAAQAEAAWAAoABQAIAAIABQALAAgADwAAAAwADwADAAAA"),
+"material": SubResource("StandardMaterial3D_lkucc"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("QtFkouJC4e1C0WSi4kL//0LRZKLiQs7o//8AAAAAbO///wAAAAD/v///AAAAAM3O2tT//9CSFMfa1P//0JL//9rU///QkprN//8AAP//SML//wAA////v///AAD//zHLvC5kouJC4Oy8LmSi4kL//7wuZKLiQnnPAAAAAAAAo+4AAAAAAAD/vwAAAAAAAGvHJCv//9CSY8UkK///0JL//yQr///Qkq3iAAAAAP//E8EAAAAA////vwAAAAD//3fT3rd8tv9/YtP6HH0wt7JgugAA/39tOrYfAubzF/9/YtOFPIUeq+aWGgAA/39EQdAbiLu4s/9/YtO00aLTSLVwuAAA/3+0wcXaPObbGP9/YtO36F/J1+ZKGwAA/39m1xjR")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lad6t")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3f3bv"]
+points = PackedVector3Array(2.94981, 9.53139, 5.49456, -4.39569, -4.76717, -8.82327, -4.39569, -4.76717, 15.9567, 4.74516, -4.32695, -9.47374, 4.38786, -4.56852, 15.6131, -2.86445, 9.60612, 5.51476, -2.73988, 4.44823, -2.39996, -4.6295, -3.51208, -8.65664, 2.83155, 4.43064, -2.34879, 4.29777, -3.68516, 15.3625, 4.38786, -4.56852, -8.47973, -4.24313, -3.7727, 15.5322, -3.08767, 8.13158, 6.52755, 4.74516, -3.91952, -9.06775, 2.91442, 9.44409, 5.08916, 2.8683, 8.20374, 6.5648, -2.79876, 9.44409, 5.08916, 2.85084, 5.93529, -0.154741, 3.23864, 6.69949, 7.68151, -4.13114, -2.15557, 14.1299, -3.04749, 8.42488, 6.12348)
+
+[node name="Strada" type="StaticBody3D"]
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_0ac3f")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_3f3bv")

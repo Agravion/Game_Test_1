@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://ftsayjqeuvxi"]
+
+[ext_resource type="Texture2D" uid="uid://b2qktqjgx3a3a" path="res://Models/XRicc/B3Palazo_Palazo.png" id="1_ue8ni"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0utno"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_ue8ni")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yksmr"]
+_surfaces = [{
+"aabb": AABB(47.3308, 68.4753, -17.8601, 165.183, 157.736, 154.764),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2i8y1"]
+resource_name = "B3Palazo_Cube_002"
+_surfaces = [{
+"aabb": AABB(47.3308, 68.4753, -17.8601, 165.183, 157.736, 154.764),
+"attribute_data": PackedByteArray("5P8Zf3Go5X/bgUeq//8g/22o3//2gb7U0oYtqhCMZqLShi2q7Iak1GCMpN/shqTUirb3f4q293+Ktvd/L67//y+u//8vrv//KowSqiqMEqoqjBKqRYyJ1EWMidRFjInU"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_0utno"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(1.99387, 2.00928, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//u/8AAAAA////vwAAAAD//+z/AAD/////u/8AAP////9CwAAA/////+z/AAAAAAAA//8AAAAAAAAQwAAAAAAAAOz/AAD//wAA//8AAP//AAD7wAAA//8AAOz///8AAP//u////wAA//8TwP//AAD//7L2////////u///////////v////////9P4//8AAAAA/////wAAAABJwP//AAAAAET5/////wAA////////AAA4wP////8AABbp/////x8APoDq/wnA/////y7u54jq/wnA2f8lgNoEtInq/wnA2f8lgFrhUY/q/wnA/////zsFdoqnCSw7/////9P/qH85vHR42f8lgEYJjJJyvOV42f8lgHPvRYi+tH5p")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yksmr")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o08g3"]
+points = PackedVector3Array(47.4182, 68.4969, -17.8601, 212.5, 225.81, 136.904, 212.449, 68.4753, 136.856, 47.3443, 225.81, 136.904, 212.426, 225.739, -17.8601, 47.3955, 68.4753, 136.856, 47.4182, 225.739, -17.8601, 212.426, 68.4969, -17.8601)
+
+[node name="B3Palazo" type="StaticBody3D"]
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 186.274, 0)
+mesh = SubResource("ArrayMesh_2i8y1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 186.274, 0)
+shape = SubResource("ConvexPolygonShape3D_o08g3")

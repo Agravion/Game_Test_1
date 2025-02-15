@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b16nfbco5e4yh"
+path.s3tc="res://.godot/imported/Fed3b_Federico1.png-6504514f5af3f14c63b5174b5a8ba21d.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "b995e50487b9147fc4849fc624722829"
+}
+
+[deps]
+
+source_file="res://Models/Fed3b_Federico1.png"
+dest_files=["res://.godot/imported/Fed3b_Federico1.png-6504514f5af3f14c63b5174b5a8ba21d.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

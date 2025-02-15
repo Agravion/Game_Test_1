@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo0q5kao3y6rs"]
+
+[ext_resource type="PackedScene" uid="uid://bninebhokkw47" path="res://Models/XRicc/RiCC.glb" id="1_vi3j0"]
+
+[node name="RiCC" instance=ExtResource("1_vi3j0")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/5/rotation = Quaternion(-0.0316874, -0.109031, -0.482147, 0.868701)
+bones/6/rotation = Quaternion(-0.18524, -0.311171, -0.746629, 0.558035)
+bones/7/rotation = Quaternion(-0.137558, 0.305934, -0.0275068, 0.941661)
+bones/9/rotation = Quaternion(-0.0316874, 0.109031, 0.482147, 0.868701)
+bones/10/rotation = Quaternion(0.0416735, 0.283306, 0.797743, 0.530667)
+bones/11/rotation = Quaternion(-0.128278, 0.942023, -0.228828, 0.209226)
+bones/17/rotation = Quaternion(0.522703, 0.4858, 0.560962, -0.419645)

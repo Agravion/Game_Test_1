@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5ici7qlovxds"]
+
+[ext_resource type="PackedScene" uid="uid://i7a6ywg1hm0o" path="res://Models/XRicc/BlancoMAnno.glb" id="1_qhtce"]
+
+[node name="BlancoMAnno" instance=ExtResource("1_qhtce")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/5/rotation = Quaternion(-0.0316874, -0.109031, -0.482147, 0.868701)
+bones/6/rotation = Quaternion(-0.181058, -0.310508, -0.736348, 0.573232)
+bones/7/rotation = Quaternion(-0.137558, 0.305934, -0.0275068, 0.941661)
+bones/9/rotation = Quaternion(-0.0316874, 0.109031, 0.482147, 0.868701)
+bones/10/rotation = Quaternion(0.0494892, 0.275174, 0.787728, 0.548921)
+bones/11/rotation = Quaternion(-0.238271, 0.955453, -0.174116, -0.00444259)
+bones/17/rotation = Quaternion(0.522703, 0.4858, 0.560962, -0.419645)

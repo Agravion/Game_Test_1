@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://1tqfj0ldximb"]
+
+[ext_resource type="Texture2D" uid="uid://ck72ix1gduts6" path="res://Models/XRicc/B1Penny_PennyM.png" id="1_asxie"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thjbr"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_asxie")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kremm"]
+_surfaces = [{
+"aabb": AABB(-70.1649, 68.4753, -17.8601, 278.308, 157.736, 154.764),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP7///8AAAAAAAAAAAAAAAD+/wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6mf2p"]
+resource_name = "B1Penny_Cube_002"
+_surfaces = [{
+"aabb": AABB(-70.1649, 68.4753, -17.8601, 278.308, 157.736, 154.764),
+"attribute_data": PackedByteArray("2/8Zf32u5X/Bgkeq//8g/3eu3//kgr7UcoktqoSQZqJyiS2qlYmk1O+QpN+ViaTU2LX3f9i193/Ytfd//LX///y1///8tf//p5ASqqeQEqqnkBKqy5CJ1MuQidTLkInU"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_thjbr"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(1.47869, 2.00928, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//1/8AAAAA////vwAAAAD//+z/AAD+////1/8AAP7///8pwAAA/v///+z/AAAAAAAA//8AAAAAAAACwAAAAAAAAOz/AAD+/wAA//8AAP7/AABcwAAA/v8AAOz///8AAP//1////wAA//8LwP//AAD//7L2////////1///////////v////////9P4//8AAAAA/////wAAAAAZwP//AAAAAET5/////wAA////////AAAIwP////8AABbp/////xIAJIDq/wnA/////3zxQIfq/wnA6P8VgBECIoTq/wnA6P8VgJPrNYrq/wnA/////x4EO4inCSw7/////+X/y385vHR46P8VgN8Fv4tyvOV46P8VgMD4noO+tH5p")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kremm")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hv3af"]
+points = PackedVector3Array(-68.4201, 68.568, -17.8601, 204.287, 226.212, 135.568, 206.558, 68.4753, 136.846, -68.5804, 68.4753, 136.846, 206.398, 68.568, -17.8601, -66.3054, 226.209, -16.6704, 204.287, 226.212, -16.6726, -66.3054, 226.209, 135.566)
+
+[node name="B1Penny" type="StaticBody3D"]
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 186.274, 0)
+mesh = SubResource("ArrayMesh_6mf2p")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 186.274, 0)
+shape = SubResource("ConvexPolygonShape3D_hv3af")

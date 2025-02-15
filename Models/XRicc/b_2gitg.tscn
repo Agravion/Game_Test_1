@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=4 uid="uid://cf0edc4xgtaq3"]
+
+[ext_resource type="Texture2D" uid="uid://dr83x754fkv1q" path="res://Models/XRicc/B2GITG_GITG.png" id="1_boksk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ei5fi"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_boksk")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dlyo4"]
+_surfaces = [{
+"aabb": AABB(-224.848, 68.4753, -17.8601, 432.991, 157.736, 154.764),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP7///8AAAAAAAAAAAAAAAD+/wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0o78x"]
+resource_name = "B2GITG_Cube_002"
+_surfaces = [{
+"aabb": AABB(-224.848, 68.4753, -17.8601, 432.991, 157.736, 154.764),
+"attribute_data": PackedByteArray("4/8ZfyOj5X/ngUeq//8g/x6j3/8Cgr7U/YYtqlyMZqL9hi2qGIek1K6MpN8Yh6TU6qj3f+qo93/qqPd/Ban//wWp//8Fqf//d4wSqneMEqp3jBKqkoyJ1JKMidSSjInU"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_ei5fi"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(1.94597, 2.00928, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//5f8AAAAA////vwAAAAD//+z/AAD+////5f8AAP7///8XwAAA/v///+z/AAAAAAAA//8AAAAAAAD/vwAAAAAAAOz/AAD+/wAA//8AAP7/AAAmwAAA/v8AAOz///8AAP//5f///wAA//8GwP//AAD//7L2////////5f//////////v////////9P4//8AAAAA/////wAAAAAKwP//AAAAAET5/////wAA////////AAABwP////8AABbp/////wsAF4Dq/wnA/////9P0lYXq/wnA8P8NgO4A3IHq/wnA8P8NgALy/Ybq/wnA/////xoDNYanCSw7/////+7/3n85vHR48P8NgOgD0YdyvOV48P8NgML8nYG+tH5p")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dlyo4")
+
+[node name="B2GITG" type="StaticBody3D"]
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 186.274, 0)
+mesh = SubResource("ArrayMesh_0o78x")
+skeleton = NodePath("")

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://euvra33dxeot"]
+
+[ext_resource type="PackedScene" uid="uid://dj8xyvitx0wdv" path="res://Models/XRicc/38Sp.glb" id="1_372eq"]
+
+[node name="38Sp" instance=ExtResource("1_372eq")]

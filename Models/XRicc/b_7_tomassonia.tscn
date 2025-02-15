@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://hyxau353pe0h"]
+
+[ext_resource type="Texture2D" uid="uid://4vc1ahw3jq6i" path="res://Scenes/B7Tomassonia_CasaTOmmassonnni.png" id="1_yphyq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70bvm"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_yphyq")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_amycv"]
+_surfaces = [{
+"aabb": AABB(-235.785, 68.4753, -17.8601, 448.299, 157.736, 154.764),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP7///8AAAAAAAAAAAAAAAD+/wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g2li8"]
+resource_name = "B7Tomassonia_Cube_002"
+_surfaces = [{
+"aabb": AABB(-235.785, 68.4753, -17.8601, 448.299, 157.736, 154.764),
+"attribute_data": PackedByteArray("FfXymvOCo4+6ahua//99+Dp+///haij6A3ICmtV5aJgDcgKaKnIP+ip6df0qcg/65as5muWrOZrlqzmaipN8+oqTfPqKk3z63HkOmtx5DprceQ6aA3r2+QN69vkDevb5"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_70bvm"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(1.35815, 2.10909, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//4v8AAAAA//+QwQAAAAD///f/AAD+////+f8AAP7///+8wwAA/v////f/AAAAAAAA//8AAAAAAAAlxAAAAAAAAPf/AAD+/wAA//8AAP7/AAD5wQAA/v8AAPf///8AAP//yf///wAA//851v//AAD///H/////////sv////////9Nz////////+P///8AAAAA/////wAAAACA3P//AAAAAOT//////wAA////////AADZy/////8AANX//3//f0kSkqT2/wPA/3//f0TO3Jj2/wPA+v8DgL0Ze7P2/wPA+f8FgCrY6ZP2/wPA/////zMrZdb3v/B//////76yn6bwv+F//P/8f6cuTd3wv+F//v/+f2y4yKPov9F/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_amycv")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_u5awq"]
+points = PackedVector3Array(201.206, 223.24, 136.904, -229.443, 68.4753, -17.8601, -229.443, 225.024, -17.8601, 206.171, 68.4753, -17.8601, -224.477, 70.2598, 136.904, 206.171, 225.024, -17.8601, -224.477, 223.24, 136.904, 201.206, 70.2598, 136.904)
+
+[node name="B7Tomassonia" type="StaticBody3D"]
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 186.274, 0)
+mesh = SubResource("ArrayMesh_g2li8")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 186.274, 0)
+shape = SubResource("ConvexPolygonShape3D_u5awq")
